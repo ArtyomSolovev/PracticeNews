@@ -37,7 +37,6 @@ final class FeedView: UIView {
     }
     
     func configure() {
-        self
         self.addSubview(tableView)
         tableView.leftAnchor.constraint(equalTo: self.leftAnchor).isActive = true
         tableView.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
