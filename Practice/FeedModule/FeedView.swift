@@ -13,7 +13,6 @@ final class FeedView: UIView {
     
     lazy var tableView: UITableView = {
         let view = UITableView(frame: .zero, style: .grouped)
-        view.backgroundColor = .gray
         view.register(PostTableViewCell.self, forCellReuseIdentifier: PostTableViewCell.id)
         view.translatesAutoresizingMaskIntoConstraints = false
         view.rowHeight = 77.0
@@ -39,9 +38,9 @@ final class FeedView: UIView {
     
     func configure() {
         self.addSubview(tableView)
-        self.leftAnchor.constraint(equalTo: self.leftAnchor).isActive = true
-        self.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
-        self.rightAnchor.constraint(equalTo: self.rightAnchor).isActive = true
-        self.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
+        tableView.leftAnchor.constraint(equalTo: self.leftAnchor).isActive = true
+        tableView.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
+        tableView.rightAnchor.constraint(equalTo: self.rightAnchor).isActive = true
+        tableView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
     }
 }
